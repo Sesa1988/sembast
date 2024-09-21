@@ -152,9 +152,9 @@ class SembastDatabase extends Object
   /// Database implementation.
   SembastDatabase(this.openHelper, [this._storageBase]) {
     if (_storageBase is DatabaseStorage) {
-      _storageFs = _storageBase;
+      _storageFs = _storageBase as DatabaseStorage?;
     } else if (_storageBase is StorageJdb) {
-      _storageJdb = _storageBase;
+      _storageJdb = _storageBase as StorageJdb?;
     }
   }
 
